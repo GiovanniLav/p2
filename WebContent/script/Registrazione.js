@@ -11,6 +11,10 @@ function checkNomeCognome(inputtxt) {
 
 
 function checkEmail(inputtxt) {
+	var maxLength = 50;
+    if (inputtxt.length > maxLength) {
+        return false; // Se l'input supera il limite, restituisci false
+    }
 	var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 	if(inputtxt.value.match(email)) 
 		return true;
